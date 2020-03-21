@@ -6,8 +6,6 @@
 body {
     background-color: lightgray;
     display: grid;
-    /* flex-direction: column;
-    align-items: center; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
     overflow: hidden;
@@ -17,7 +15,6 @@ body {
 
 
 .titulo {
-    /* border: black solid 2px; */
     grid-column-end: span 2;
     margin: 0;
     padding: 0;
