@@ -25,16 +25,13 @@ function alternate() {
     return letra
 }
 
- 
-
-let pause = true
-
+ let pause = true
 
 function titulo() {
     const elemento = createItem('div', 'titulo')
     const nomeJogo = createItem('h1', 'nomeJogo')
 
-    nomeJogo.innerHTML = 'Jogo Da Velha'
+    nomeJogo.innerHTML = 'Hash Game'
 
     document.body.appendChild(elemento)
     elemento.appendChild(nomeJogo)
@@ -49,16 +46,16 @@ function placar() {
     elemento.appendChild(this.jogador)
     elemento.appendChild(this.simbolo)
 
-    this.jogador.innerHTML = 'Jogador 1'
+    this.jogador.innerHTML = 'Player 1'
     this.simbolo.innerHTML = 'X'
 }
 
 function repeatPlacar(simbol) {
     if( simbol === 'O') {
-        document.querySelector('.jogador').innerHTML = 'Jogador 1'
+        document.querySelector('.jogador').innerHTML = 'Player 1'
         document.querySelector('.simbolo').innerHTML = 'X'
     } else {
-        document.querySelector('.jogador').innerHTML = 'Jogador 2'
+        document.querySelector('.jogador').innerHTML = 'Player 2'
         document.querySelector('.simbolo').innerHTML = 'O'
     }
 }
@@ -101,10 +98,10 @@ function winner() {
         b3 === b6 && b3 === b9 && b3 != '-' ||
         b1 === b5 && b1 === b9 && b1 != '-' ||
         b3 === b5 && b3 === b7 && b3 != '-') {
-            if(j === 'Jogador 1') {
-                document.querySelector('.msg').innerHTML = 'Fim de Jogo, Jogador 2 venceu!'
+            if(j === 'Player 1') {
+                document.querySelector('.msg').innerHTML = 'Player 2 won!'
             } else {
-                document.querySelector('.msg').innerHTML = 'Fim de Jogo, Jogador 1 venceu!'
+                document.querySelector('.msg').innerHTML = 'Player 1 won!'
         }
     } 
 }
@@ -119,7 +116,7 @@ function filler(classe) {
     const elemento = document.querySelector(classe)
     elemento.onclick = a => {
         if (elemento.innerHTML === 'X' || elemento.innerHTML === 'O') {
-            alert('Opa! essa casa já está ocupada')
+            alert('Spot already filled!')
         } else {
             let msg = document.querySelector('.msg').innerHTML
             if (msg === '...') { 
@@ -127,7 +124,7 @@ function filler(classe) {
                 repeatPlacar(letra)
                 winner()   
             } else {
-                alert ('Reiniciar')}
+                alert ('Restart!')}
         } 
     }
     return elemento

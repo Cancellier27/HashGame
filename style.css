@@ -48,10 +48,12 @@ body {
 }
 
 .simbolo {
+    width: 110px;
+    height: 110px;
+    text-align: center;
     font-size: 2em;
     border: black solid 2px; 
     margin: 5px;
-    padding: 10px 30px;
 }
 
 .tabuleiro {
@@ -68,6 +70,7 @@ body {
 }
 
 .tabuleiro div {
+    cursor: pointer;
     box-sizing: border-box;
     background-color: darkorange;
     height: 100px;
@@ -128,11 +131,16 @@ body {
 }
 
 .restart {
+    cursor: pointer;
     margin: 0;
     padding: 10px 30px;
     font-size: 0.6em;
     border-radius: 40px;
     background-color: darkorange;
+}
+
+.restart:active {
+    background-color: rgb(243, 174, 89);
 }
 
 .msg {
