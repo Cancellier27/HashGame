@@ -4,13 +4,13 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: lightgray;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
-    overflow: hidden;
     gap: 10px;
+
 
 }
 
@@ -162,7 +162,6 @@ body {
         "score"
         "game"
         "result";
-        
     }
     
     .titulo {
@@ -191,5 +190,4 @@ body {
     .botoes {
         font-size: 1em;
     }
-
 }
